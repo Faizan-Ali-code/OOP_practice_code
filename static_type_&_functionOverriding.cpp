@@ -28,14 +28,26 @@ public:
 		cout << "\nThis is Display() method"
 			" of DerivedClass";
 	}
+	
+//	void Show()
+//	{
+//		cout << "\nThis is Show() method "
+//			"of Derived Class";
+//	}
+	
+	void Show()
+	{
+		cout << "\nThis is Show() method "
+			"of Derived Class";
+	}
 };
 
 // Driver code
 int main()
 {
 	DerivedClass dr;
-	BaseClass &bs = dr;
+	BaseClass &bs = dr;  //static type of bs is baseClass so it's own function ll be called rather than derived class's
 	bs.Display();
-	dr.Show();
+	dr.Show();  //if derived class does not have show function then show() of base class ll be called.
 }
 
